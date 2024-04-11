@@ -22,5 +22,4 @@ def get_random_word():
     return word
 
 if __name__ == '__main__':
-
     app.run(debug=True, port=5555)

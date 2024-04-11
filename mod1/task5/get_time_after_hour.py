@@ -9,5 +9,4 @@ def get_time_after_hour():
     return f"Точное время через час будет {current_time_after_hour}"
 
 if __name__ == '__main__':
-
     app.run(debug=True, port=5555)

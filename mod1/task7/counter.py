@@ -12,5 +12,4 @@ def counter():
     return f'{visit_counter}'
 
 if __name__ == '__main__':
-
     app.run(debug=True, port=5555)

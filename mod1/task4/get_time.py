@@ -9,5 +9,4 @@ def get_time():
     return f"Точное время: {current_time}"
 
 if __name__ == '__main__':
-
     app.run(debug=True, port=5555)
