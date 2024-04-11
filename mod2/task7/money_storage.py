@@ -32,7 +32,7 @@ def calculate(year, month):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Запуск Flask приложения')
-    parser.add_argument('--port', type=int, default=5000, help='Порт для запуска Flask приложения')
+    parser.add_argument('--port', type=int, default=5454, help='Порт для запуска Flask приложения')
     args = parser.parse_args()
 
     app.run(debug=True, port=args.port)
