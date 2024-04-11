@@ -6,7 +6,7 @@ import argparse
 app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-@app.route('/preview/<size>/<path:rel_path>')
+@app.route('/preview/<int:size>/<path:rel_path>')
 def get_preview(size, rel_path):
     abs_path = os.path.abspath(os.path.join(BASE_DIR, rel_path))
     try:
