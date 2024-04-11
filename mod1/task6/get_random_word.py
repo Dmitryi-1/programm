@@ -20,6 +20,5 @@ words_list = get_all_words(BOOK_FILE)
 def get_random_word():
     word = choice(words_list)
     return word
-
 if __name__ == '__main__':
     app.run(debug=True, port=5555)

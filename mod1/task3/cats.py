@@ -7,6 +7,5 @@ cat_list = ['корниш-рекс', 'русская голубая', 'шотл�
 @app.route('/cats')
 def cats():
     return choice(cat_list)
-
 if __name__ == '__main__':
     app.run(debug=True, port=5555)
