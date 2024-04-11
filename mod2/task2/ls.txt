@@ -1,0 +1,4 @@
+total 8
+-rw-rw-r-- 1 admin1 admin1 1239 апр 11 17:06 get_mean_size.py
+-rw-rw-r-- 1 admin1 admin1    0 апр 11 17:34 ls.txt
+-rw-rw-r-- 1 admin1 admin1   38 апр 11 17:06 test.sh
