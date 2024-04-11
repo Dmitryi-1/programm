@@ -15,6 +15,7 @@ class TestBlockErrors(unittest.TestCase):
             with BlockErrors(err_types):
                 a = 1 / 0
 
+
     def test_inner_block_error_raised_outer_ignored(self):
         outer_err_types = {TypeError}
         inner_err_types = {ZeroDivisionError}

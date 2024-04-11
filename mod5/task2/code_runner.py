@@ -42,4 +42,4 @@ def get_code_and_timeout():
 
 if __name__ == '__main__':
     app.config['WTF_CSRF_ENABLED'] = False
-    app.run(debug=True)
+    app.run(debug=True,port=5467)

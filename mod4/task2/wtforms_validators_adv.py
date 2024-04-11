@@ -10,14 +10,9 @@ app = Flask(__name__)
 
 
 def number_length(min: int = 0, max: int = 0, message: Opt[str] = None):
-    """
-    :param min: The number of digits in the number must be greater than or equal to
-    :param max: The number of digits in the number must be less or equal
-    :param message: Message for bad condition
-    :return: validator
-    """
+
     if not message:
-        message = 'Number must be non-negative and length must be within the specified range.'
+        message = 'Число должно быть неотрицательным, а длина должна находиться в указанном диапазоне.'
 
     def _number_length(form: FlaskForm, field: Field):
         if field.data is not None and len(str(field.data)) < min or len(str(field.data)) > max:
@@ -30,11 +25,11 @@ class NumberLength:
     def __init__(self, min: int = 0, max: int = 0, message: Opt[str] = None):
         self.min = min
         self.max = max
-        self.message = message or 'Number must be non-negative and length must be within the specified range.'
+        self.message = message or 'Число должно быть неотрицательным, а длина должна находиться в указанном диапазоне.'
 
     def __call__(self, form: FlaskForm, field: Field):
         if not self.message:
-            self.message = 'Number must be non-negative and length must be within the specified range.'
+            self.message = 'Число должно быть неотрицательным, а длина должна находиться в указанном диапазоне.'
 
         if field.data is not None and len(str(field.data)) < self.min or len(str(field.data)) > self.max:
             raise ValidationError(self.message)
@@ -63,4 +58,4 @@ def registration():
 
 if __name__ == '__main__':
     app.config['WTF_CSRF_ENABLED'] = False
-    app.run(debug=True)
+    app.run(debug=True,port=5546)

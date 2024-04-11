@@ -8,7 +8,7 @@ class TestCodeRunner(unittest.TestCase):
         'timeout': '20'
     }
 
-    less_time = '5'
+    less_time = '1'
 
     invalid_code = 'some_boolshit'
 

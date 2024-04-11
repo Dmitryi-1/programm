@@ -38,4 +38,4 @@ if __name__ == '__main__':
         print(f"Port 5000 is already in use by processes: {processes}. Trying to release the port...")
         kill_processes(processes)
 
-    app.run(port=5000, debug=False)
+    app.run(debug=False,port=5000)

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница не найдена</title>
+</head>
+<body>
+<h3>Страница не найдена. Попробуйте пройти по ссылке</h3>
+<h4>Список доступных страниц</h4><br>
+{% for link in links %}
+    <a href="{{link[0]}}">{{ link[1] }}</a><br>
+    {% if link[0] == '/cats' %}
+        <a href="{{ link[0] }}/1">{{ link[1] }}/1</a>
+    {% endif %}
+{% endfor %}
+</body>
+</html>

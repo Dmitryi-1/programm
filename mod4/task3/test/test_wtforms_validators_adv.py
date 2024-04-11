@@ -6,12 +6,12 @@ from mod4.task2.wtforms_validators_adv import app
 class TestWtformsValidatorsAdv(unittest.TestCase):
 
     valid_data = {
-            'email': 'valid_email@example.com',
-            'phone': '1234567890',
-            'name': 'Test Name',
-            'address': 'Test Address',
-            'index': '123456',
-            'comment': 'Test Comment'
+            'email': 'fg5xgr57@mail.ru',
+            'phone': '9126768695',
+            'name': 'Dima',
+            'address': 'bolshoiy istok',
+            'index': '60000',
+            'comment': 'skjfhsdkjfhs'
     }
     invalid_data = {
             'email': 'invalid_email',
@@ -61,7 +61,7 @@ class TestWtformsValidatorsAdv(unittest.TestCase):
         response = self.app.post(self.base_url, data=self.data)
         response_text = response.data.decode()
         self.assertEqual(response.status_code, 400)
-        self.assertTrue('email' in response_text)
+        self.assertTrue('name' in response_text)
 
     def test_valid_address(self):
         response = self.app.post(self.base_url, data=self.data)
