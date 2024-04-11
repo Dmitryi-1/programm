@@ -93,7 +93,7 @@ if __name__ == "__main__":
     logging.basicConfig(
         level=logging.DEBUG,
         format="%(levelname)s:%(message)s",
-        filename="walk_log_4.txt",
+        filename="walk_log_1.txt",
     )
 
     root = get_tree(7)
